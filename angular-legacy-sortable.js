@@ -5,8 +5,6 @@
  */
 (function (factory) {
 	'use strict';
-	
-	Sortable = Sortable.default || Sortable;
 
 	if (typeof define === 'function' && define.amd) {
 		define(['angular', 'sortablejs'], factory);
@@ -22,6 +20,8 @@
 })(function (angular, Sortable) {
 	'use strict';
 
+	// Use default import if available
+	Sortable = Sortable.default || Sortable;
 
 	/**
 	 * @typedef   {Object}        ngSortEvent
